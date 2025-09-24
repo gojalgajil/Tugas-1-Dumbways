@@ -1,0 +1,84 @@
+body {
+  background-color: lightblue;
+}
+
+.judul {
+    font-family: "Libertinus Keyboard", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+img {
+    width: 100px;
+    display: block;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: "Averia Gruesa Libre", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+p {
+    font-family: "Bitcount Single Ink", system-ui;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-variation-settings:
+    "slnt" 0,
+    "CRSV" 0.5,
+    "ELSH" 0,
+    "ELXP" 0,
+    "SZP1" 0,
+    "SZP2" 0,
+    "XPN1" 0,
+    "XPN2" 0,
+    "YPN1" 0,
+    "YPN2" 0;
+}
+
+h2 {
+    font-family: "Anton SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+table {
+    border-collapse: separate;
+    width: 100%;
+    }
+
+th, td {
+    border: 1px solid black;
+    padding: 8px 12px;
+    text-align: left;
+    }
+
+th {
+    background: #e0dddd; 
+    width: 150px;  
+    font-family: "Smooch Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;     
+    }
+
+td {
+    background: rgb(193, 236, 185);
+}
+
+.jadwal {
+    border-color: greenyellow;
+    background-color: aqua;
+}
+
+.agent {
+    border-color: red;
+    background-color: blueviolet;
+}
+
+.model {
+    border-color: pink;
+    background-color: yellow;
+}
