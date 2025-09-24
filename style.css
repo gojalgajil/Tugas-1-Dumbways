@@ -1,84 +1,56 @@
 body {
-  background-color: lightblue;
-}
-
-.judul {
-    font-family: "Libertinus Keyboard", system-ui;
-  font-weight: 400;
-  font-style: normal;
-}
-
-img {
-    width: 100px;
-    display: block;
+    font-family: "Comic Relief", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
     margin: 0 auto;
+    padding: 20px;
+    max-width: 600px;
 }
 
-h1 {
-    font-family: "Averia Gruesa Libre", system-ui;
-    font-weight: 400;
-    font-style: normal;
-}
-
-p {
-    font-family: "Bitcount Single Ink", system-ui;
-    font-optical-sizing: auto;
-    font-weight: weight;
-    font-style: normal;
-    font-variation-settings:
-    "slnt" 0,
-    "CRSV" 0.5,
-    "ELSH" 0,
-    "ELXP" 0,
-    "SZP1" 0,
-    "SZP2" 0,
-    "XPN1" 0,
-    "XPN2" 0,
-    "YPN1" 0,
-    "YPN2" 0;
-}
-
-h2 {
-    font-family: "Anton SC", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-table {
-    border-collapse: separate;
-    width: 100%;
-    }
-
-th, td {
-    border: 1px solid black;
-    padding: 8px 12px;
+.pembuka{
     text-align: left;
-    }
-
-th {
-    background: #e0dddd; 
-    width: 150px;  
-    font-family: "Smooch Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: weight;
-    font-style: normal;     
-    }
-
-td {
-    background: rgb(193, 236, 185);
 }
 
-.jadwal {
-    border-color: greenyellow;
-    background-color: aqua;
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 20px;
+    background: black;
+    color: white;
+    font-weight: bold;
 }
 
-.agent {
-    border-color: red;
-    background-color: blueviolet;
+.simbol {
+    margin: 20px;
+    font-size: 30px;
 }
 
-.model {
-    border-color: pink;
-    background-color: yellow;
+.kartu {
+    width: 250px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgb(223, 217, 217);
+    overflow: hidden;
+}
+
+.kartu img {
+    width: 100%;
+    display: block;
+}
+
+.text {
+    padding: 10px;
+    background: white;
+}
+
+.text h3 {
+    margin: 0;
+    font-weight: bold;
+}
+
+.text p {
+    margin: 5px 0 0;
+    font-size: 14px;
 }
