@@ -1,18 +1,26 @@
 body {
     font-family: "Comic Relief", system-ui;
     font-weight: 400;
-    font-style: normal;
-    text-align: center;
-    margin: 0 auto;
+    margin: 0;
     padding: 20px;
-    max-width: 600px;
 }
 
-.pembuka{
+.profile{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+
+}
+
+.biodata {
+    flex: 2;
     text-align: left;
 }
 
-button {
+.tombolkontak {
     display: inline-block;
     padding: 10px 20px;
     margin: 10px 0;
@@ -23,21 +31,22 @@ button {
 }
 
 .simbol {
-    margin: 20px;
     font-size: 30px;
+    padding: 20px 0 0 0;
 }
 
 .kartu {
-    width: 250px;
-    margin: 20px auto;
-    border-radius: 10px;
+    flex: 1;
     box-shadow: 0 4px 8px rgb(223, 217, 217);
     overflow: hidden;
+    text-align: center;
+    border-radius: 10px;
 }
 
 .kartu img {
-    width: 100%;
-    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
 }
 
 .text {
@@ -54,3 +63,32 @@ button {
     margin: 5px 0 0;
     font-size: 14px;
 }
+
+.unduh {
+    padding: 20px;
+}
+
+.logo {
+    width: 90px;
+    height: auto;
+}
+
+.nav-itemnav-item{
+    font-weight: bold;
+    padding-left: 30px;
+}
+
+.nav-MyProject {
+    padding-left: 20px;
+}
+
+.butt-contactme{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 20px;
+    background: black;
+    color: white;
+    font-weight: bold;
+}
+
