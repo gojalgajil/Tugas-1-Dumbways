@@ -1,0 +1,119 @@
+/* body {
+    font-family: "Comic Relief", system-ui;
+    font-weight: 400;
+    margin: 0;
+    padding: 20px;
+} */
+
+.profile{
+    /* display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px; */
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+
+}
+
+.title {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.isidata {
+    display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.biodata {
+    flex: 2;
+    /* text-align: left; */
+}
+
+.tombolkontak {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 20px;
+    background: black;
+    color: white;
+    font-weight: bold;
+}
+
+.kartu {
+    flex: 1;
+  box-shadow: 0 4px 8px rgb(223, 217, 217);
+  border-radius: 10px;
+  background: white;
+  padding: 20px;
+}
+
+.text {
+    margin-bottom: 20px; /* kasih jarak antar section */
+}
+
+.text h3 {
+    margin: 0;
+    font-weight: bold;
+}
+
+.text p {
+    margin: 8px 0;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* jarak icon dengan tulisan */
+}
+
+.logo {
+    width: 90px;
+    height: auto;
+}
+
+.nav-itemnav-item{   
+    padding-left: 30px;
+}
+
+.nav-MyProject {
+    font-weight: bold;
+    padding-left: 20px;
+}
+
+.butt-contactme{
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 20px;
+    background: black;
+    color: white;
+    font-weight: bold;
+}
+
+.deskripsi {
+    margin-top: 20px;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+#projectForm {
+  max-width: 600px;   /* biar gak kepanjangan */
+  margin: 0 auto;     /* auto = center horizontal */
+  background: #fff;   /* kasih background putih */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+.judulmyproject{
+    font-weight: bold;
+    text-align: center;
+}
