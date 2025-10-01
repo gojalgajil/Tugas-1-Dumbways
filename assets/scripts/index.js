@@ -64,28 +64,26 @@ localStorage.setItem("projects", JSON.stringify(projects));
 document.getElementById("projectForm").reset(); // simpan ulang ke localstorage
 }
 
-  function renderProjects() {
+ function renderProjects() {
   let projectList = document.getElementById("projectList");
-  projectList.innerHTML = ""; // kosongkan dulu biar ga dobel
+  if (!projectList) return; // kalau bukan di index.html, stop
 
+  // contoh filter, cuma project yang punya nama (biar ga kosong)
+  let filteredProjects = projects.filter(p => p.name && p.name.trim() !== "");
+  // si filter() itu callback, buat mengembalikan array baru
+  // kalau ada data aneh/blank enggak ditampilin
 
-// looping pakai for
-for (let i = 0; i <projects.length; i++){
-    let p = projects[i];
-
-    // conditional + operator
+  // ubah array project -> array HTML string pakai map
+  let cards = filteredProjects.map((p, i) => { //map buat mengembalikan array baru, isinya HTML string card.
     let descText = p.desc
-    ? p.desc.substring(0, 100) + "..."
-    : "No description provided"; // ? jika nilai true : false
+      ? p.desc.substring(0, 100) + "..."
+      : "No description provided";
+
     let techText = p.techs.length > 0
-    ? p.techs.join(", ")
-    : "No tech delected";
+      ? p.techs.join(", ") // biar jadi string HTML gede
+      : "No tech selected";
 
-
-  // p.desc.substring(0, 100) untuk ambil 100 karakter pertama biar deskripsi enggak kepanjangan
-  // p.techs.join untuk gabung array tech jadi string
-  // tombol delete buat manggil deleteProject(i) sesuai index project
-    projectList.innerHTML += `
+    return `
       <div class="col-md-4">
         <div class="card h-100 shadow-sm">
           <img src="${p.image}" class="card-img-top" alt="${p.name}">
@@ -96,24 +94,64 @@ for (let i = 0; i <projects.length; i++){
             <p><strong>Tech:</strong> ${techText}</p>
             <div class="d-flex justify-content-between">
               <button class="btn btn-sm btn-dark">Edit</button>
+              <button class="btn btn-sm btn-primary" onclick="goToDetail(${i})">Detail</button>
               <button class="btn btn-sm btn-danger" onclick="deleteProject(${i})">Delete</button>
             </div>
           </div>
         </div>
       </div>
     `;
-  }
-}
+  });
 
+  // gabungkan array string jadi satu HTML
+  projectList.innerHTML = cards.join("");
+}
 
 function deleteProject(index) {
   projects.splice(index, 1); // untuk hapus 1 project dari array
   localStorage.setItem("projects", JSON.stringify(projects));
-document.getElementById("projectForm").reset(); // simpan ulang ke localstorage
+
+// document.getElementById("projectForm").reset(); // simpan ulang ke localstorage
   renderProjects(); // render ulang tampilan
 }
 
-renderProjects(); // buat render project pas halaman dibuka
+function goToDetail(index){
+  window.location.href = `detail.html?id=${index}`;
+}
+
+//tambahan render detail project
+function renderDetail(){
+  let detailContainer = document.getElementById("detail");
+  if (!detailContainer) return;
+
+const params = new URLSearchParams(window.location.search);
+const id = params.get("id");
+
+let project = projects[id];
+
+if (!project){
+  detailContainer.innerHTML = "<p> Project tidak ditemukan. </p>";
+  return;
+}
+
+detailContainer.innerHTML = `
+    <div class="card shadow-sm p-3">
+      <img src="${project.image}" style="max-width:400px;" class="mb-3">
+      <h3>${project.name}</h3>
+      <p><strong>Duration:</strong> ${project.start} - ${project.end}</p>
+      <p><strong>Description:</strong> ${project.desc}</p>
+      <p><strong>Tech:</strong> ${project.techs.join(", ")}</p>
+    </div>
+  `;
+}
+
+// ==================== AUTO RENDER ====================
+renderProjects();
+renderDetail();
+
+
+
+// renderProjects(); // buat render project pas halaman dibuka
 // Tugas Day6
 // Array (sudah ada)
 // Array of object (sudah ada: name, start, end, dll)
